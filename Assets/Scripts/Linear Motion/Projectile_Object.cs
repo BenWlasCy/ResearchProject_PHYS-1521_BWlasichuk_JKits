@@ -41,6 +41,7 @@ public class Projectile_Object : MonoBehaviour
 
     public void TestForce() // testing adding force
     {
+        initialPosition = transform.position;
         launched = true;
         this.transform.parent = null;
         m_Rigidbody.AddForce(savedVelocity, 0, 0, ForceMode.Impulse);
