@@ -26,6 +26,6 @@ public class HeightPlatform : MonoBehaviour
         Debug.Log(stringValue);
         float value = float.Parse(stringValue);
         height = value;
-        transform.position = new Vector3(-5f, height, 0f);
+        transform.position = new Vector3(0f, height, 0f);
     }
 }
