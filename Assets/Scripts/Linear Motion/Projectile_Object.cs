@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Projectile_Object : MonoBehaviour
 {
@@ -9,6 +10,9 @@ public class Projectile_Object : MonoBehaviour
     float savedVelocity;
     [SerializeField]
     Vector3 initialPosition;
+
+    [SerializeField]
+    GameObject areaText;
 
     bool launched;
 
@@ -23,6 +27,7 @@ public class Projectile_Object : MonoBehaviour
         launched = false;
         savedVelocity = 0;
         m_Rigidbody = GetComponent<Rigidbody>();
+        areaText.SetActive(false);
     }
 
     // Update is called once per frame
@@ -57,6 +62,8 @@ public class Projectile_Object : MonoBehaviour
             savedPosition = new Vector3 (transform.position.x, 0, 0);
             Reset();
             Debug.Log(savedPosition);
+            areaText.GetComponent<TMP_Text>().text = ("Distance: " + savedPosition.x);
+            areaText.SetActive(true);
             }
             if(!launched)
             {
