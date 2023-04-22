@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+    path: Assets/Scenes/VectorsScene.unity
+    guid: 9e6c8107b90c7e342a0455f73212eaa5
+  - enabled: 1
     path: Assets/Scenes/LVelocityScene.unity
     guid: a173df60b70f2c04dbc412ec50dfecf0
   m_configObjects:
